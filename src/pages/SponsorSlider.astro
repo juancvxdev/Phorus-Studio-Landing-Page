@@ -1,0 +1,105 @@
+<div class="w-full max-w-5xl mx-auto">
+    <div>
+        <div
+            class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] group"
+        >
+            <ul
+                class="flex items-center justify-center [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll group-hover:paused group-hover:cursor-pointer"
+                id="slider"
+            >
+                <li>
+                    <img
+                        draggable="false"
+                        class="w-40 filter brightness-0 invert opacity-20"
+                        src="icons/insta360.svg"
+                        alt="Insta360"
+                    />
+                </li>
+                <li>
+                    <img
+                        draggable="false"
+                        class="filter brightness-0 invert opacity-20"
+                        src="icons/google.svg"
+                        alt="Google"
+                    />
+                </li>
+                <li>
+                    <img
+                        draggable="false"
+                        class="lg:w-[8rem] w-[6rem] h-auto filter grayscale opacity-60"
+                        src="icons/street-view.svg"
+                        alt="Street View"
+                    />
+                </li>
+                <li>
+                    <img
+                        draggable="false"
+                        class="w-[5.2rem] h-auto filter grayscale opacity-60"
+                        src="icons/dji.svg"
+                        alt="DJI"
+                    />
+                </li>
+            </ul>
+            <ul
+                class="flex items-center justify-center [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll group-hover:paused group-hover:cursor-pointer"
+                id="slider"
+            >
+                <li>
+                    <img
+                        draggable="false"
+                        class="w-40 filter brightness-0 invert opacity-20"
+                        src="icons/insta360.svg"
+                        alt="Insta360"
+                    />
+                </li>
+                <li>
+                    <img
+                        draggable="false"
+                        class="filter brightness-0 invert opacity-20"
+                        src="icons/google.svg"
+                        alt="Google"
+                    />
+                </li>
+                <li>
+                    <img
+                        draggable="false"
+                        class="lg:w-[8rem] w-[6rem] h-auto filter grayscale opacity-60"
+                        src="icons/street-view.svg"
+                        alt="Street View"
+                    />
+                </li>
+                <li>
+                    <img
+                        draggable="false"
+                        class="w-[5.2rem] h-auto filter grayscale opacity-60"
+                        src="icons/dji.svg"
+                        alt="DJI"
+                    />
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        initFunction();
+    });
+
+    function initFunction() {
+        // Find element by id slider
+        let ul = document.getElementById("slider");
+
+        if (ul instanceof Element) {
+            // Clones the element and inserts it after the original one.
+            let clonedUl: HTMLElement = ul.cloneNode(true) as HTMLElement;
+            ul.insertAdjacentElement("afterend", clonedUl);
+
+            // Set the 'aria-hidden' attribute to 'true' for the following sibling of the original
+            let nextSibling = clonedUl.nextElementSibling;
+            if (nextSibling instanceof Element) {
+                nextSibling.setAttribute("aria-hidden", "true");
+            }
+        }
+    }
+</script>

@@ -1,0 +1,18 @@
+---
+
+import SectionHeader from "./SectionHeader.astro";
+import SectionWorks from "../components/page";
+import Footer from "../components/Footer";
+import LayoutHero from "../layouts/Layout.astro";
+import SectionServices from './SectionServices.astro';
+---
+
+<LayoutHero title="Phorus Studio | Potencia tu marca">
+  
+
+    <SectionHeader />
+    <SectionWorks client:only="react" />
+    <SectionServices/>
+
+    <Footer client:only="react" />
+</LayoutHero>
