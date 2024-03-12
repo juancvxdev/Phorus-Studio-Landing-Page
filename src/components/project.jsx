@@ -37,9 +37,9 @@ export default function index({ project }) {
 
             <p className=" text-3xl lg:text-6xl m-0 mr-3">{title1}</p>
 
-            <motion.div variants={anim} animate={isActive ? "open" : "closed"} className="flex items-center">
+            <motion.div variants={anim} animate={isActive ? "open" : "closed"} className="flex  justify-center w-0 overflow-hidden">
 
-                <img src={`/images/${src}`} alt="Project Image" className="w-40" />
+                <img src={`/images/${src}`} alt="Project Image" className="w-24 h-24 object-cover max-w-full max-h-full"/>
 
             </motion.div>
 
